@@ -1,0 +1,24 @@
+const Message = require("../models/Message");
+
+exports.getMessages = async (req, res) => {
+  const messages = await Message.find();
+  res.json(messages);
+};
+
+exports.createMessage = async (req, res) => {
+  const { author, text, date } = req.body;
+  const newMsg = new Message({ author, text, date });
+  await newMsg.save();
+  res.status(201).json(newMsg);
+};
+
+exports.deleteMessage = async (req, res) => {
+  await Message.findByIdAndDelete(req.params.id);
+  res.json({ message: "Удалено" });
+};
+
+exports.updateMessage = async (req, res) => {
+  const { text } = req.body;
+  const msg = await Message.findByIdAndUpdate(req.params.id, { text }, { new: true });
+  res.json(msg);
+};

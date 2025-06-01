@@ -1,0 +1,66 @@
+/* LoginPage.css */
+
+body {
+    background-color: #1e1e2f;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+label {
+    display: block; /* Делает элементы блочными для вертикального выравнивания */
+    margin: 10px 0 5px; /* Отступы для разделения от полей ввода */
+    color: #ffffff; /* Цвет текста */
+    text-align: left; /* Выравнивание текста влево */
+}
+
+.container {
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0; /* Убираем все отступы */
+    font-size: 20px; /* Размер шрифта */
+    text-align: right; /* Выравнивание текста вправо */
+    padding-right: 660px; /* Отступ справа */
+    position: absolute; /* Позволяет разместить заголовок в верхней части */
+    top: 20px; /* Отступ от верхней части */
+    right: 20px; /* Отступ от правой части */
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #4d4d66;
+    border-radius: 5px;
+    background-color: #3a3a53;
+    color: #ffffff;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #b3b3cc;
+}
+
+button {
+    background-color: #5a5a8a;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 108%;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #6a6a9a;
+}
